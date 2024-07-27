@@ -13,7 +13,7 @@ export default function ListEdit() {
   useEffect(() => {
     const fetchList = async () => {
       try {
-        const res = await axios.get(`/lists/${id}`, {
+        const res = await axios.get(`https://netflix-mern-backend.onrender.com/api/lists/${id}`, {
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
@@ -26,7 +26,7 @@ export default function ListEdit() {
 
     const fetchAllMovies = async () => {
       try {
-        const res = await axios.get('/movies', {
+        const res = await axios.get('https://netflix-mern-backend.onrender.com/api/movies', {
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
@@ -43,13 +43,13 @@ export default function ListEdit() {
 
   const handleAddMovie = async () => {
     try {
-      await axios.put(`/lists/${id}/add`, { movieId: selectedMovieId }, {
+      await axios.put(`https://netflix-mern-backend.onrender.com/api/lists/${id}/add`, { movieId: selectedMovieId }, {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
         },
       });
       // Refresh list data or provide user feedback
-      const res = await axios.get(`/lists/${id}`, {
+      const res = await axios.get(`https://netflix-mern-backend.onrender.com/api/lists/${id}`, {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
         },
@@ -62,13 +62,13 @@ export default function ListEdit() {
 
   const handleRemoveMovie = async () => {
     try {
-      await axios.put(`/lists/${id}/remove`, { movieId: movieIdToRemove }, {
+      await axios.put(`https://netflix-mern-backend.onrender.com/api/lists/${id}/remove`, { movieId: movieIdToRemove }, {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
         },
       });
       // Refresh list data or provide user feedback
-      const res = await axios.get(`/lists/${id}`, {
+      const res = await axios.get(`https://netflix-mern-backend.onrender.com/api/lists/${id}`, {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
         },
