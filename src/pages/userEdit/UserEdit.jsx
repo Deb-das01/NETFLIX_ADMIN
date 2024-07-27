@@ -11,7 +11,7 @@ export default function UserEdit() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get(`/users/find/${userId}`, {
+        const res = await axios.get(`https://netflix-mern-backend.onrender.com/api/users/find/${userId}`, {
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
@@ -32,7 +32,7 @@ export default function UserEdit() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/users/${userId}`, user, {
+      await axios.put(`https://netflix-mern-backend.onrender.com/api/users/${userId}`, user, {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
         },
