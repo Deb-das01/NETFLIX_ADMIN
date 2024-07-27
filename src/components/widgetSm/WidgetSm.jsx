@@ -9,7 +9,7 @@ export default function WidgetSm() {
     const getNewUsers = async () => {
       try {
         //The request is being made to the API we created to fetch the user details those who are new
-        const res = await axios.get("/users?new=true", {
+        const res = await axios.get("https://netflix-mern-backend.onrender.com/api/users?new=true", {
           headers: {
             token:
               "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
