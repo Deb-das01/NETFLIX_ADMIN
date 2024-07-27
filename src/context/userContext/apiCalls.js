@@ -3,7 +3,7 @@ import axios from "axios";
 export const getUsers = async (dispatch) => {
   dispatch({ type: "GET_USERS_START" });
   try {
-    const res = await axios.get("/users", {
+    const res = await axios.get("https://netflix-mern-backend.onrender.com/api/users", {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
@@ -16,7 +16,7 @@ export const getUsers = async (dispatch) => {
 
 export const deleteUser = async (id, dispatch) => {
   try {
-    await axios.delete(`/users/${id}`, {
+    await axios.delete(`https://netflix-mern-backend.onrender.com/api/users/${id}`, {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
