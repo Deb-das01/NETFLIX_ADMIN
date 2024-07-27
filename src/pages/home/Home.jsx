@@ -36,7 +36,7 @@ export default function Home() {
         const res = await axios.get("https://netflix-mern-backend.onrender.com/api/users/stats", {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTdmNjFjNTFjZmQ3NjNhYzc2OGMxMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTQ0OTcyMSwiZXhwIjoxNzUyOTg1NzIxfQ.w-p_iPxt4VXnvgYWi3OPFs7cYRDnDmMTIbD-_6m8YMI"          
+              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,          
             },
         });
         //The Months os the stats are being sorted so that the data appears sequentially
