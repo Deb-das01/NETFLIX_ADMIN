@@ -1,0 +1,15 @@
+To understand the working of Context you need to have a good understanding of context API 
+read carefully or refer youtub videos
+
+
+Refer to this video: https://www.youtube.com/watch?v=rgp_iCVS8ys
+
+
+understand the work flow:-
+
+INITIALLY the apiCalls are made from a particular file for accessing
+
+1st:  Inside the apiCalls file a function is being dispatched
+2nd:  According to the dispatched type the reducer changes the state of variable in the reducer file
+3rd:  In movieContext file the currect state is thus updated according to the state modified by reducer
+NOTE: As the last update is performed in the context file so this record is stored and used further

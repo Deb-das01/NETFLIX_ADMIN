@@ -1,0 +1,94 @@
+.listEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .listEdit h1 {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .listEditForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .listEditItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .listEditItem label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .listEditItem input[type="text"],
+  .listEditItem select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .listEditItem button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .listEditItem button:hover {
+    background-color: #0056b3;
+  }
+  
+  .listMovies {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .listMovies h2 {
+    margin-bottom: 10px;
+  }
+  
+  .listMovies ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listMovies li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .listMovies button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .listMovies button:hover {
+    background-color: #c82333;
+  }
+  

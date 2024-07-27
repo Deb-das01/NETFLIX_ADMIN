@@ -1,0 +1,63 @@
+.newProduct {
+  flex: 4;
+}
+
+.addProductForm {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.addProductItem {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.addProductItem > label {
+  color: gray;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.addProductItem > input {
+  padding: 10px;
+}
+
+.addProductItem > select {
+  padding: 10px;
+}
+
+.addProductButton {
+  height: 30px;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: darkblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+}
+.uploadProgress {
+  margin: 20px 0;
+  width: 80%; /* Adjust width to be shorter */
+  max-width: 400px; /* Optional: set a max width */
+  background-color: #e0e0e0; /* Light gray background for the progress bar */
+  border-radius: 5px; /* Rounded corners */
+  height: 8px; /* Smaller height */
+  position: relative; /* Relative positioning for better control */
+}
+
+.progressBar {
+  height: 100%; /* Full height of the container */
+  background-color: #4caf50; /* Green color for the progress bar */
+  width: 0; /* Initial width, to be adjusted dynamically */
+  border-radius: 5px; /* Rounded corners to match the container */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+
