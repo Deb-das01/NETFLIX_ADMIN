@@ -33,7 +33,7 @@ export default function Home() {
     //The original stats for the new Users every month is being fetched requesting the API
     const getStats = async () => {
       try {
-        const res = await axios.get("/users/stats", {
+        const res = await axios.get("https://netflix-mern-backend.onrender.com/api/users/stats", {
           headers: {
             token:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTdmNjFjNTFjZmQ3NjNhYzc2OGMxMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTQ0OTcyMSwiZXhwIjoxNzUyOTg1NzIxfQ.w-p_iPxt4VXnvgYWi3OPFs7cYRDnDmMTIbD-_6m8YMI"          
