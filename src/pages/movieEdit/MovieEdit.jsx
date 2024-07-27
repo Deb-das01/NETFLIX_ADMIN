@@ -20,7 +20,7 @@ export default function MovieEdit() {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const res = await axios.get(`/movies/find/${id}`, {
+        const res = await axios.get(`https://netflix-mern-backend.onrender.com/api/movies/find/${id}`, {
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
@@ -41,7 +41,7 @@ export default function MovieEdit() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/movies/${id}`, {
+      await axios.put(`https://netflix-mern-backend.onrender.com/api/movies/${id}`, {
         title,
         desc,
         img,
